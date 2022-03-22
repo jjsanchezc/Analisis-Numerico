@@ -9,9 +9,6 @@ def newton(x0,tol,niter,f):
     while error>tol and f!=0 and df!=0 and contador <niter:
         #FALTA TODA LA PARTE DE OPERACIONES
         return 0
-
-
-        
     if f==0:
         print("x0 es raiz")
     elif error<tol:
