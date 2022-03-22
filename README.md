@@ -1,7 +1,7 @@
 ## Proyecto de Analisis Numerico
 
-este repositorio solo va a guardar los metodos y ya 
-aca se va a probar cada metodo
+este repositorio solo va a guardar los metodos y ya. 
+Aca se va a probar cada metodo
 
 ## Authors and acknowledgment
 
