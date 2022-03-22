@@ -1,7 +1,7 @@
 ## Proyecto de Analisis Numerico
 
-Este es un proyecto para la materia de Analisis numerico.
-Este proyecto será una aplicación web donde se podrán realizar diferentes calculos con los metodos vistos en clase
+este repositorio solo va a guardar los metodos y ya 
+aca se va a probar cada metodo
 
 ## Authors and acknowledgment
 
