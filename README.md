@@ -5,7 +5,7 @@ Este proyecto será una aplicación web donde se podrán realizar diferentes cal
 
 ## Authors and acknowledgment
 
-Maria Paulina Ocampo
-Maria Jose Gutierrez
-Daniel Jaramillo
-Juan Jose Sanchez
+- Maria Paulina Ocampo
+- Maria Jose Gutierrez
+- Daniel Jaramillo
+- Juan Jose Sanchez
