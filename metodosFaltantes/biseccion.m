@@ -1,6 +1,9 @@
 %Bisección: se ingresa el valor inicial y final del intervalo (xi, xs), la tolerancia del error (Tol) y el màximo nùmero de iteraciones (niter) 
 
 function [s,E,fm] = Biseccion(xi,xs,Tol,niter)
+
+    %{paso 1:
+        }%
     syms x
     f(x)=exp(2-6*x)*cos(x^2-3*x)+4*x-3;
 %    f=9.8*x*(1-exp(-15*9/x))/15-35;
@@ -16,7 +19,7 @@ function [s,E,fm] = Biseccion(xi,xs,Tol,niter)
         E=0;
         fprintf('%f es raiz de f(x)',xs)
     elseif fs*fi<0
-        c=0;
+        c=0; %contador , ¿por qué en el libro aparece como 1?
         xm=(xi+xs)/2;
         fm(c+1)=eval(subs(f,xm));
         fe=fm(c+1);
