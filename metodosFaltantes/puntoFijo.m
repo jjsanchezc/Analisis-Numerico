@@ -1,6 +1,6 @@
 %Punto fijo: se ingresa el valor inicial (x0), la tolerancia del error (Tol) y el màximo nùmero de iteraciones (niter) 
 
-function [n,xn,fm,E] = pf(x0,Tol,niter)
+function [n,xn,fm,E] = puntoFijo(x0,Tol,niter)
     syms x
     
     f=log((sin(x/100)+20))-x/(3/10);
@@ -13,7 +13,7 @@ function [n,xn,fm,E] = pf(x0,Tol,niter)
         xn=x0;
         while error>Tol && fe~=0 && c<niter
             xn=eval(subs(g,x0));
-            fm(c+2)=eval(subs(f,xn));
+            fm(c+2)=eval(subs(f,xn)); % por que se usa con c+2?
             fe=fm(c+2);
             E(c+2)=abs(xn-x0);
             error=E(c+2);

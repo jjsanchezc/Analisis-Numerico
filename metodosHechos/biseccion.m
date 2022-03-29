@@ -12,11 +12,10 @@ A DJANGO, COMO POR EJEMPLO, COMO HACEMOS LO DE LOS
 INPUTS
 %}
 function [s,E,fm] = biseccion(xi,xs,Tol,niter)
-    syms x
+    syms x %crea la variable x
         f(x)=exp(2-6*x)*cos(x^2-3*x)+4*x-3;
         fi=eval(subs(f,xi));
         fs=eval(subs(f,xs));
-    
     %{
     otros ejemplos de ecuaciones
     f=9.8*x*(1-exp(-15*9/x))/15-35
@@ -38,8 +37,8 @@ function [s,E,fm] = biseccion(xi,xs,Tol,niter)
             fprintf('%f es raiz de f(x)',xs)
     
         elseif fs*fi<0
-            c=0;
-            xm=(xi+xs)/2;
+            c=0; %contador =1 o =0  ?
+            xm=(xi+xs)/2; %la m tiene algun significado? xi= x inferior
             fm(c+1)=eval(subs(f,xm));
             fe=fm(c+1);
             E(c+1)=Tol+1;
@@ -52,11 +51,11 @@ function [s,E,fm] = biseccion(xi,xs,Tol,niter)
                     xi=xm;
                     fi=eval(subs(f,xi));
                 end
-                xa=xm;
+                xa=xm;  % x auxiliar
                 xm=(xi+xs)/2;
                 fm(c+2)=eval(subs(f,xm));
                 fe=fm(c+2);
-                E(c+2)=abs((xm-xa));
+                E(c+2)=abs((xm-xa));%por qué poner esto y no solamente que el error=abs((xm-xa)) ??
                 error=E(c+2);
                 c=c+1;
             end
