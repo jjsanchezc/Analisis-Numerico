@@ -13,7 +13,7 @@ function [n,xn,fm,dfm,E] = newton(x0,Tol,niter)
         E(c+1)=Tol+1;
         error=E(c+1);
         xn=x0;
-        while error>Tol 
+        while error>Tol && c<niter && fe~=0 && dfe~=0
             xn=x0-fe/dfe;
             fm(c+2)=eval(subs(f,xn));
             fe=fm(c+2);

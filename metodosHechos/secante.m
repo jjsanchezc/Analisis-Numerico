@@ -19,9 +19,9 @@ function xs = secante(fun,a,b,tol)
     fb = feval(fun, b);
     xs = b - ((b - a) / (fb - fa))*fb;
     error = abs(b - a);
-    
-    fprintf('Iter. \t a \t \t b \t \t Xs \n');
-    fprintf('%2i \t %f \t %f \t %f \n', i, a, b, xs);
+
+    fprintf('Iter. \t a \t \t \t b \t \t \t Xs \t f(Xs) \t \t eRroR \n');
+    fprintf('%2i \t %f \t %f \t %f \t %f \n', i, a, b, xs,feval(fun,xs));
     
     while error >= tol
         b = a;
@@ -30,10 +30,10 @@ function xs = secante(fun,a,b,tol)
         fa = feval(fun,a);
         xs = b - ((b - a)/(fb - fa))*fb;
         error = abs(b - a);
+
         i = i + 1;
-        fprintf('%2i \t %f \t %f \t %f \n', i, a, b, xs);
+        fprintf('%2i \t %f \t %f \t %f \t %f \t %f \n', i, a, b, xs,feval(fun,xs),error);
     end
     w = feval(fun,xs);
-    fprintf('\n La mejor aproximación a la raiz tomando una tolerancia de %f es \n x = %f con \n f(x)=
-    %f\n y se realizaron %i iteraciones\n',tol, xs, w, i);
+    fprintf('\n La mejor aproximación a la raiz tomando una tolerancia de %f es \n x = %f con \n f(x)= f\n y se realizaron %i iteraciones\n',tol, xs, w, i);
     end
